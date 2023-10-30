@@ -1,15 +1,23 @@
 //Calcolo derivate con matrici
 #include <stdio.h>
 
+#define dimensioneMax 200
+
 int main (void)
 {
     int gradoPol, i, j;
     printf("Inserisci il grado del polinomio: \n");
     scanf("%d", &gradoPol);
-    
-    int matriceAssociata [gradoPol][gradoPol]; //Matrice Associata alla derivata
-    int polinomio[gradoPol];//Polinomio da Derivare
-    int derivata[gradoPol];//Derivata
+
+    if (gradoPol > 2000) {
+        printf("Grado maggiore di 2000 non supportarto");
+        return 0;
+    }
+
+
+    int matriceAssociata[dimensioneMax][dimensioneMax]; //Matrice Associata alla derivata
+    int polinomio[dimensioneMax];//Polinomio da Derivare
+    int derivata[dimensioneMax];//Derivata
     
 
     //Calcolo della Matrice Associata
